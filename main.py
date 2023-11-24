@@ -5,7 +5,8 @@ def menu():
     print("2. Resta")
     print("3. Multiplicación")
     print("4. División")
-    print("5. Salir")
+    print("5. Potencia")
+    print("6. Salir")
     
 
 def main():
@@ -17,11 +18,11 @@ def main():
         menu()
         opcion = int(input("Ingrese la opción deseada: "))
 
-        if opcion == 5:
+        if opcion == 6:
             print("Gracias por usar la calculadora.")
             break
 
-        if opcion in [1, 2, 3, 4]:
+        if opcion in [1, 2, 3, 4, 5]:
             if opcion == 1:
                 resultado = calculadora.suma()
             elif opcion == 2:
@@ -34,6 +35,9 @@ def main():
                 except ValueError as e:
                     print(e)
                     continue
+            elif opcion == 5:
+                resultado = calculadora.potencia()
+
         else:
             print("Opción no soportada.")
             continue

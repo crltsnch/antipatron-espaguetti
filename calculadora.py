@@ -32,3 +32,6 @@ class Calculadora:
             return self.num1 / self.num2
         else:
             raise ValueError("No se puede dividir entre cero.")
+        
+    def potencia(self):
+        return self.num1 ** self.num2
