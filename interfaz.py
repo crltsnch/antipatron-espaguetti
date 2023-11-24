@@ -70,4 +70,13 @@ class Interfaz:
             result = calculadora.multiplicacion()
             self.mostrar_resultado(result)
     
-   
+    def division(self):
+        num1, num2 = self.get_numbers()
+        if num1 is not None and num2 is not None:
+            calculadora = Calculadora(num1, num2)
+            try:
+                result = calculadora.division()
+                self.mostrar_resultado(result)
+            except ValueError as e:
+                messagebox.showerror("Error, no se puede dividir entre 0", e)
+                return None
