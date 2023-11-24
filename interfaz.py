@@ -63,4 +63,11 @@ class Interfaz:
             result = calculadora.resta()
             self.mostrar_resultado(result)
 
+    def multiplicacion(self):
+        num1, num2 = self.get_numbers()
+        if num1 is not None and num2 is not None:
+            calculadora = Calculadora(num1, num2)
+            result = calculadora.multiplicacion()
+            self.mostrar_resultado(result)
     
+   
