@@ -45,3 +45,8 @@ class Interfaz:
             messagebox.showerror("Error", "Debe ingresar números.")
             return None
         return num1, num2   
+    
+    def mostrar_resultado(self, resultado):
+        self.result_label.config(text=f"Resultado: {resultado}")
+    
+    
