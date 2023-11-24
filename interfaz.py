@@ -36,3 +36,12 @@ class Interfaz:
 
         self.quit_button = tk.Button(root, text="Salir", command=root.destroy)
         self.quit_button.pack()
+
+    def get_numbers(self):
+        try:
+            num1 = float(self.entry1.get())
+            num2 = float(self.entry2.get())
+        except ValueError:
+            messagebox.showerror("Error", "Debe ingresar números.")
+            return None
+        return num1, num2   
