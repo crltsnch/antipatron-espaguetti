@@ -13,48 +13,42 @@
     else:
         print("Operación no soportada.")'''
 
+class Calculadora:
+    def __init__(self, num1, num2):
+        self.num1 = num1
+        self.num2 = num2
 
-def suma(num1, num2):
-    return num1 + num2
+    def set_nums(self):
+        self.num1 = input("Introduce el primer número: ")
+        self.num2 = input("Introduce el segundo número: ")
 
-def resta(num1, num2):
-    return num1 - num2
+    def suma(self):
+        return self.num1 + self.num2
 
-def multiplicacion(num1, num2):
-    return num1 * num2
+    def resta(self):
+        return self.num1 - self.num2
 
-def division(num1, num2):
-    if num2 != 0:
-        return num1 / num2
-    else:
-        raise ValueError("No se puede dividir entre cero.")
+    def multiplicacion(self):
+        return self.num1 * self.num2
 
-def main():
-    print("Bienvenido a la calculadora")
-    print("1. Suma")
-    print("2. Resta")
-    print("3. Multiplicación")
-    print("4. División")
-    print("5. Salir")
-    opcion = int(input("Ingrese la opción deseada: "))
-    if opcion == 5:
-        print("Gracias por usar la calculadora.")
-        return
-    num1 = int(input("Ingrese el primer número: "))
-    num2 = int(input("Ingrese el segundo número: "))
-    if opcion == 1:
-        print("El resultado de la suma es: ", suma(num1, num2))
-    elif opcion == 2:
-        print("El resultado de la resta es: ", resta(num1, num2))
-    elif opcion == 3:
-        print("El resultado de la multiplicación es: ", multiplicacion(num1, num2))
-    elif opcion == 4:
-        try:
-            print("El resultado de la división es: ", division(num1, num2))
-        except ValueError as e:
-            print(e)
-    else:
-        print("Opción no soportada.")
-    
-if __name__ == '__main__':
-    main()
+    def division(self):
+        if self.num2 != 0:
+            return self.num1 / self.num2
+        else:
+            raise ValueError("No se puede dividir entre cero.")
+
+
+
+
+def calcular(self, operacion):
+        if operacion == 'suma':
+            return self.suma()
+        if operacion == 'resta':
+            return self.resta()
+        if operacion == 'multiplicacion':
+            return self.multiplicacion()
+        if operacion == 'division':
+            return self.division()
+        else:
+            raise ValueError("Operación no soportada.")
+
