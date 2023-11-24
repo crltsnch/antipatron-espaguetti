@@ -14,9 +14,9 @@
         print("Operación no soportada.")'''
 
 class Calculadora:
-    def __init__(self, num1, num2):
-        self.num1 = num1
-        self.num2 = num2
+    def __init__(self):
+        self.num1 = 0
+        self.num2 = 0
 
     def suma(self):
         return self.num1 + self.num2
@@ -42,18 +42,39 @@ def menu():
     print("5. Salir")
     
 
-def main(self, operacion):
+def main():
     calculadora = Calculadora()
     while True:
         menu()
-        if operacion == 'suma':
-            return self.suma()
-        if operacion == 'resta':
-            return self.resta()
-        if operacion == 'multiplicacion':
-            return self.multiplicacion()
-        if operacion == 'division':
-            return self.division()
-        else:
-            raise ValueError("Operación no soportada.")
+        opcion = int(input("Ingrese la opción deseada: "))
 
+        if opcion == 5:
+            print("Gracias por usar la calculadora.")
+            break
+
+        num1 = float(input("Ingrese el primer número: "))
+        num2 = float(input("Ingrese el segundo número: "))
+
+        calculadora.set_numeros(num1, num2)
+
+        if opcion == 1:
+            resultado = calculadora.suma()
+        elif opcion == 2:
+            resultado = calculadora.resta()
+        elif opcion == 3:
+            resultado = calculadora.multiplicacion()
+        elif opcion == 4:
+            try:
+                resultado = calculadora.division()
+            except ValueError as e:
+                print(e)
+                continue
+        else:
+            print("Opción no soportada.")
+            continue
+
+        print(f"El resultado de la operación es: {resultado}")
+
+
+if __name__ == '__main__':
+    main()
