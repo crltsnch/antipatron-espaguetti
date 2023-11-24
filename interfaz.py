@@ -7,13 +7,13 @@ class Interfaz:
         self.root = root
         self.root.title("Calculadora")
 
-        self.label1 = tk.Label(root, text="Ingrese el primer número:")
+        self.label1 = tk.Label(root, text="Ingrese el primer número (a):")
         self.label1.pack()
 
         self.entry1 = tk.Entry(root)
         self.entry1.pack()
 
-        self.label2 = tk.Label(root, text="Ingrese el segundo número:")
+        self.label2 = tk.Label(root, text="Ingrese el segundo número (b):")
         self.label2.pack()
 
         self.entry2 = tk.Entry(root)
@@ -25,14 +25,17 @@ class Interfaz:
         self.button_suma = tk.Button(root, text="Suma", command=self.suma)
         self.button_suma.pack()
 
-        self.button_resta = tk.Button(root, text="Resta", command=self.resta)
+        self.button_resta = tk.Button(root, text="Resta (a-b)", command=self.resta)
         self.button_resta.pack()
 
         self.button_multiplicacion = tk.Button(root, text="Multiplicación", command=self.multiplicacion)
         self.button_multiplicacion.pack()
 
-        self.button_division = tk.Button(root, text="División", command=self.division)
+        self.button_division = tk.Button(root, text="División (a/b)", command=self.division)
         self.button_division.pack()
+
+        self.button_potencia = tk.Button(root, text="Potencia (a^b)", command=self.potencia)
+        self.button_potencia.pack()
 
         self.quit_button = tk.Button(root, text="Salir", command=root.destroy)
         self.quit_button.pack()
@@ -80,6 +83,13 @@ class Interfaz:
             except ValueError as e:
                 messagebox.showerror("Error, no se puede dividir entre 0", e)
                 return None
+            
+    def potencia(self):
+        num1, num2 = self.get_numbers()
+        if num1 is not None and num2 is not None:
+            calculadora = Calculadora(num1, num2)
+            result = calculadora.potencia()
+            self.mostrar_resultado(result)
 
 def main():
     root = tk.Tk()
