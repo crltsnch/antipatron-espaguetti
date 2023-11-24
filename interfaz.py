@@ -80,3 +80,11 @@ class Interfaz:
             except ValueError as e:
                 messagebox.showerror("Error, no se puede dividir entre 0", e)
                 return None
+
+def main():
+    root = tk.Tk()
+    interfaz = Interfaz(root)
+    root.mainloop()
+
+if __name__ == '__main__':
+    main()
