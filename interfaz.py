@@ -49,4 +49,11 @@ class Interfaz:
     def mostrar_resultado(self, resultado):
         self.result_label.config(text=f"Resultado: {resultado}")
     
+    def suma(self):
+        num1, num2 = self.get_numbers()
+        if num1 is not None and num2 is not None:
+            calculadora = Calculadora(num1, num2)
+            result = calculadora.suma()
+            self.mostrar_resultado(result)
+    
     
