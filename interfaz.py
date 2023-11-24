@@ -19,4 +19,7 @@ class Interfaz:
         self.entry2 = tk.Entry(root)
         self.entry2.pack()
 
+        self.result_label = tk.Label(root, text="Resultado:")
+        self.result_label.pack()
+
         
