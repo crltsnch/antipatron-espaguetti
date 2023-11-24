@@ -1,5 +1,7 @@
 # antipatron-espaguetti
 El link a mi repositorio es: [GitHub](https://github.com/crltsnch/antipatron-espaguetti.git)
+
+###Ejercicio
 Un antipatrón de programación es un patrón que puede ser considerado una mala práctica. "Spaghetti Code" es un antipatrón que se refiere a código con una estructura de control compleja, difícil de leer y seguir, generalmente debido a múltiples saltos de control, como instrucciones GOTO, ciclos y excepciones. Dada esta porción de código Python escrita en estilo "Spaghetti Code", se pide identificar las principales características de este antipatrón y refactorizar el código para mejorar su legibilidad y mantenibilidad.
 
 ```
