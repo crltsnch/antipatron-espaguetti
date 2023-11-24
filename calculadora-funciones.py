@@ -18,10 +18,6 @@ class Calculadora:
         self.num1 = num1
         self.num2 = num2
 
-    def set_nums(self):
-        self.num1 = input("Introduce el primer número: ")
-        self.num2 = input("Introduce el segundo número: ")
-
     def suma(self):
         return self.num1 + self.num2
 
@@ -38,9 +34,18 @@ class Calculadora:
             raise ValueError("No se puede dividir entre cero.")
 
 
+def menu():
+    print("1. Suma")
+    print("2. Resta")
+    print("3. Multiplicación")
+    print("4. División")
+    print("5. Salir")
+    
 
-
-def calcular(self, operacion):
+def main(self, operacion):
+    calculadora = Calculadora()
+    while True:
+        menu()
         if operacion == 'suma':
             return self.suma()
         if operacion == 'resta':
